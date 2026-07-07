@@ -1056,8 +1056,16 @@
 <section class="cta-section" id="contact">
   <div class="cta-inner">
     <h2 class="cta-title">Ready to Book<br>Robert?</h2>
-    <p class="cta-sub">Whether it's a school assembly, a parent workshop, or a corporate keynote — let's build something worth showing up for.</p>
-    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#110;&#100;&#101;&#114;&#115;&#111;&#110;&#46;&#114;&#111;&#98;&#101;&#114;&#116;&#46;&#97;&#110;&#100;&#114;&#101;&#119;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;?subject=Booking%20Inquiry%20%E2%80%94%20Built%20Not%20Born" class="btn-white">Send a Booking Inquiry</a>
+    <p class="cta-sub">Whether it's a school assembly, a parent workshop, or a corporate keynote &mdash; let's build something worth showing up for.</p>
+    <form name="booking-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" style="width:100%;max-width:480px;margin:2rem auto 0;display:flex;flex-direction:column;gap:12px;">
+      <input type="hidden" name="form-name" value="booking-inquiry">
+      <p style="display:none;"><input name="bot-field"></p>
+      <input type="text" name="name" placeholder="Your Name" required style="padding:14px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:inherit;outline:none;">
+      <input type="email" name="email" placeholder="Your Email" required style="padding:14px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:inherit;outline:none;">
+      <input type="text" name="organization" placeholder="School or Organization" style="padding:14px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:inherit;outline:none;">
+      <textarea name="message" placeholder="Tell me about your event or program needs" rows="4" style="padding:14px 16px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:inherit;outline:none;resize:vertical;"></textarea>
+      <button type="submit" class="btn-white" style="cursor:pointer;border:none;font-family:inherit;">Send a Booking Inquiry</button>
+    </form>
   </div>
 </section>
 
