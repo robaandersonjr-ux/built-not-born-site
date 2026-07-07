@@ -1057,7 +1057,7 @@
   <div class="cta-inner">
     <h2 class="cta-title">Ready to Book<br>Robert?</h2>
     <p class="cta-sub">Whether it's a school assembly, a parent workshop, or a corporate keynote — let's build something worth showing up for.</p>
-    <a href="/cdn-cgi/l/email-protection#8ce4e9e0e0e3ccfee3eee9fef8ede2e8fee9fbede2e8e9feffe3e2a2efe3e1" class="btn-white">Send a Booking Inquiry</a>
+    <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#110;&#100;&#101;&#114;&#115;&#111;&#110;&#46;&#114;&#111;&#98;&#101;&#114;&#116;&#46;&#97;&#110;&#100;&#114;&#101;&#119;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;?subject=Booking%20Inquiry%20%E2%80%94%20Built%20Not%20Born" class="btn-white">Send a Booking Inquiry</a>
   </div>
 </section>
 
@@ -1067,7 +1067,11 @@
   <p>© 2026 Robert Andrew Anderson · Built, Not Born™</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   function switchTab(audience, btn) {
     document.querySelectorAll('.audience-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.audience-panel').forEach(p => p.classL
+    document.querySelectorAll('.audience-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + audience).classList.add('active');
+  }
+</script>
