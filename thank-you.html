@@ -4,62 +4,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thank You — Built, Not Born</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --blue: #5271FF;
+    --orange: #AD4E14;
+    --navy: #0A1831;
+    --cream: #F7F6F2;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: #0A1128;
-    color: #fff;
+    background: var(--navy);
+    color: var(--cream);
     font-family: 'Barlow', sans-serif;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
   }
-  .inner { max-width: 520px; }
-  .eyebrow {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: #E8622A;
+  .thanks-wrap { max-width: 520px; }
+  .thanks-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.75rem;
+  }
+  .thanks-icon svg { width: 28px; height: 28px; }
+  .thanks-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    letter-spacing: 0.02em;
     margin-bottom: 1rem;
   }
-  h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3rem, 8vw, 5rem);
-    line-height: 1;
-    margin-bottom: 1.25rem;
-  }
-  p {
-    font-size: 17px;
-    color: rgba(255,255,255,0.7);
+  .thanks-sub {
+    font-size: 1.05rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    color: rgba(247,246,242,0.75);
+    margin-bottom: 2.5rem;
   }
-  a {
+  .btn-home {
     display: inline-block;
-    background: #E8622A;
-    color: #fff;
+    background: var(--blue);
+    color: var(--cream);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    padding: 14px 28px;
     border-radius: 6px;
+    padding: 0.9rem 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  a:hover { background: #cf5522; }
+  .btn-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(82,113,255,0.4);
+  }
 </style>
 </head>
 <body>
-  <div class="inner">
-    <div class="eyebrow">Message Received</div>
-    <h1>You're On<br>The List.</h1>
-    <p>Thanks for reaching out. Robert will be in touch within 1–2 business days to talk through your event and next steps.</p>
-    <a href="/">Back to Home</a>
+
+<div class="thanks-wrap">
+  <div class="thanks-icon">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 12l5 5L20 6" stroke="#F7F6F2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
+  <h1 class="thanks-title">Got It — Thank You.</h1>
+  <p class="thanks-sub">Your booking inquiry has been received. Robert will follow up within 1–2 business days to talk through the details.</p>
+  <a href="/" class="btn-home">Back to Home</a>
+</div>
+
 </body>
 </html>
